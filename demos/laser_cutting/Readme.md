@@ -1,1 +1,4 @@
-a repo for hosting a series of demos that I think are helpful for HTMA
+- Non-planar parts 
+- experimenting with patterns to get curvature
+- rotary attachment example
+- etching example
