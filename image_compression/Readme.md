@@ -36,4 +36,6 @@ The route to get here is a little convoluted but it isn't too bad.  First open t
 
 Finally a little bonus on using .gitignore:
 Sometimes I like being lazy.  I don't want to deal with remembering what not to git add and just use that nice wildcard to get everything.  That would be a bit of an issue here because my uncompressed images still exist and it would defeat the whole point of this endeavor to compress and convert them if they ended up in the repo anyway.  To fix this we'll leverage the .gitignore file.  This is really designed to not track files with your credentials or API keys etc (which are embarassingly easy to find across public git repos these days)
+tldr to use this go to the top level of your repo and make a file called .gitignore
+Inside that file I am simply going to put *.png and then save it.  That way whenever you add anything in git it will overlook anything that ends in .png entirely and save you from accidentally tracking a file that you shouldn't. 
 
