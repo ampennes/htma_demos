@@ -1,0 +1,4 @@
+site_name: HTMA
+nav:
+  - Home: index.md
+  - ImageCompression: imageCompression.md
