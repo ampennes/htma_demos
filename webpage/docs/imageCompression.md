@@ -36,13 +36,22 @@ For me the script looks like:
 FOR %%a in (*.png) DO magick %%a -quality 50%% -resize 50%% %%~na_small.jpg
 ```
 
-and I saved this as compressAll.bat because I thought the name was appropriate.  You could make some tweaks here if you say normally saved images in another format or wanted to play with compression rates ec.  This is a template for you to have fun with as well as a useful tool.
+and I saved this as compressAll.bat because I thought the name was appropriate.  You could make some tweaks here if you say normally saved images in another format or wanted to play with compression rates ec.  This is a template for you to have fun with as well as a useful tool.  In a perfect world I kinda want 2 or 3 of these scripts.  One to handle images from my phone which may be another format and likely want more compression, one to handle screenshots that I took locally which need less compression, and a third for outliers.
 It is a little annoying with the escaping % characters but what this does is parse the folder, find all png files, resize, compress, and convert them to jpg files and append _small to their file names.  The file name suffix is perhaps not mandatory if your're changing image extensions but I find it a useful convention.  
 
 Now let's make this script callable from anywhere by adding it to your path which is essentially the list of places your computer will look if you try to call a file or command that isn't located where your terminal currently is.  You can kinda think of this as the difference between local and global variables in most languages.
 First lets make a permanent home for this script that is easy to access and has room to make more changes in the future.  I just made a folder in Documents called Scripts.  Short, simple, easy to remember.  The path to this folder is then C:\Users\Anthony\Documents\Scripts.  Some of y'all use things like onedrive or have other kinda funky installs so an easy way to see the file path in the file explorer is to just click in the bar at the top and copy it from there.  Make sure to copy compressAll.bat into this folder.  Now we need to update your path to include this location.
-The route to get here is a little convoluted but it isn't too bad.  First open the windows search bar and type path.  The top option should be "edit the system enviornment variables"  Open that and click the "enviornment variables" button in the bottom right.  The second element in the top list should be PATH.  click that and then click edit and a new window will open.  Hit new and paste the folder path into the cell then save and close everything.  Now if you have any terminal instances open you should close them in order for the changes to take effect.
+The route to get here is a little convoluted but it isn't too bad.  First open the windows search bar and type path.  The top option should be "edit the system enviornment variables"  ![edit](images/compression/environment_small.jpg) 
+  
+Open that and click the "enviornment variables" button in the bottom right.  ![path](images/compression/sys_prop_small.jpg) 
+  
+The second element in the top list should be PATH.  Click that and then click edit ![edit](images/compression/variables_small.jpg)
+  
+Now a new window will open.  Hit new and paste the folder path into the cell then save and close everything.![edit again](images/compression/edit_small.jpg)  
+  
+Now if you have any terminal instances open you should close them in order for the changes to take effect.
 
+## Bonus
 Finally a little bonus on using .gitignore:  
 Sometimes I like being lazy.  I don't want to deal with remembering what not to git add and just use that nice wildcard to get everything.  That would be a bit of an issue here because my uncompressed images still exist and it would defeat the whole point of this endeavor to compress and convert them if they ended up in the repo anyway.  To fix this we'll leverage the .gitignore file.  This is really designed to not track files with your credentials or API keys etc (which are embarassingly easy to find across public git repos these days)  
 tldr to use this go to the top level of your repo and make a file called .gitignore  

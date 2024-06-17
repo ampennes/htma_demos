@@ -2,3 +2,6 @@ site_name: HTMA
 nav:
   - Home: index.md
   - ImageCompression: imageCompression.md
+  - Parametric Cad: parametric.md
+  - Laser Cutting: lasers.md
+  - 3D Printing: 3Dprinting.md

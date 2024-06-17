@@ -1,4 +1,4 @@
-# Welcome to Anthony's ramblings on making things
+# Welcome to Anthony's ramblings on making (and documenting) things
 
 
 ## Purpose
@@ -18,6 +18,7 @@ While I have you on the main page I want to take the time to give a little bit o
 * `mkdocs serve` - Start the live-reloading docs server.
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit.
+* `mkdocs gh-build` - from within the web folder to push new chages to ampennes.github.io/htma-demos
 
 ## Project layout
 
