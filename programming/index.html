@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Parametric Cad - HTMA</title>
+        <title>Embedded Programming - HTMA</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
                                 <a href="../imageCompression/" class="nav-link">ImageCompression</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Parametric Cad</a>
+                                <a href="../parametric/" class="nav-link">Parametric Cad</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../lasers/" class="nav-link">Laser Cutting</a>
@@ -57,16 +57,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../imageCompression/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../lasers/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                             <li class="nav-item dropdown">
                               <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
                                 <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
@@ -115,13 +105,25 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#parametric-design" class="nav-link">Parametric design</a>
+            <li class="nav-item" data-bs-level="1"><a href="#embedded-programming" class="nav-link">Embedded Programming</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#cad-packages" class="nav-link">CAD packages</a>
+            <li class="nav-item" data-bs-level="2"><a href="#disclaimer" class="nav-link">Disclaimer</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#design-ethos" class="nav-link">Design ethos</a>
+            <li class="nav-item" data-bs-level="2"><a href="#choosing-a-language" class="nav-link">Choosing a language</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#arduino-setup" class="nav-link">Arduino setup</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#micropython-setup" class="nav-link">Micropython setup</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#debugging-strategies" class="nav-link">Debugging strategies</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -132,9 +134,15 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="parametric-design">Parametric design</h1>
-<h2 id="cad-packages">CAD packages</h2>
-<h2 id="design-ethos">Design ethos</h2></div>
+<h1 id="embedded-programming">Embedded Programming</h1>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>I should point out that while an EECS employee I technically was a MechE here and as such I am mostly a hodge podge of self taught lessons and certainly not the best individual for you to learn from so please take the below with a grain of salt.  I strive to write mostly understandable code that trades optimization for readability.  I believe execution time can be important but it is actually 2 execution speeds that I value.  First the traditionl time taken to run your code but also the time taken to write your code.  When you're just starting out code that takes 10x longer to run but uses a more understandable approach is sometimes totally fine.  We're privileged enough at this point to be running on microcontrollers with large flash storage and blazing fast clocks so the lack of optimization might not have any measurable repurcussions in your project.</p>
+<h2 id="choosing-a-language">Choosing a language</h2>
+<p>This is a rather contentious topic but I'll try to summarize the main options.  The choice is entirely up to you and I won't discourage creativety but we have 2 main options: some flavor of C (likely Arduino) and Micropython.  The former has been around for a very long time, has a simply massive amount of library support, and a wealth of tutorials.  The latter is relatively new and improving quickly but it can be a little harder to find relevant help for.  That being said some folks simply find micropython easier and would prefer to work there.  I think my advice for software choices tends to boil down to "find which option works closer to how your brain does and stick with it"  I'm a bit more adept in debugging and helping solve issues in C but most of the issues are really like logic puzzles and with the proper debugging tools are somewhat language agnostic in the solve process.  I think my biggest goal for this semester is to help folks learn how to break problems down and solve them methodologically rather than simply guessing until you land on the broken bit.</p>
+<h2 id="arduino-setup">Arduino setup</h2>
+<p>I'm going to mostly rely on the Seeed documentation here as it is pretty well written and correct at this point.  If you want to skip the dev boards and work directly with the chips (my preferred method) Jake has great documentation for that <a href="https://mtm.cba.mit.edu/2021/2021-10_microcontroller-primer/">here</a></p>
+<h2 id="micropython-setup">Micropython setup</h2>
+<h2 id="debugging-strategies">Debugging strategies</h2></div>
             </div>
         </div>
 
