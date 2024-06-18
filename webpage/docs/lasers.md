@@ -13,7 +13,7 @@ to this
 Now I won't give you numbers because that defeats the point of the exercise but we probably want to start around say 2% power and 100% speed and increase your power a couple percent at a time.  This will feel a little disappointing at first as you won't cut through all the way but it won't be a ball of fire... Don't forget to make note of the nice engraving parameter space that you'll likely pass through as you iterate to cutting.  It sounds funky but you can in fact engrave some pretty decent detail into cardboard.
 
 ## Cardboard
-Do remember that while kinda nice this is still cardboard.  Load bearing structures are certainly possible but they take quite a bit of thought and finesse.  Joint types might be a little more limiting but nice pressfits are possible.
+Do remember that while kinda nice this is still cardboard.  Load bearing structures are certainly possible but they take quite a bit of thought and finesse.  Joint types might be a little more limiting but nice pressfits are possible.  It is also quite anisotropic with different stiffnessess based on your loading direction and the orientation of the corrugations between the layers.
 
 ## Feature size
 There isn't a hard rule here but do remember the corrugated nature of cardboard.  If you decrease your feature size beneath the corrugation pitch there is no guarantee that your top and bottom layers are actually connected together.  Additionally very small features become a fire hazard so you might need to adjust your speed/power settings in order to safely cut intricate details.
