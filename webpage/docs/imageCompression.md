@@ -16,7 +16,7 @@ If those fail it is probably because you forgot to hit that checkbox while insta
 First the new commands for those of you that want individual control:  
 ```magick input.png output.jpg```    Would convert a given file from png to jpg.  
 sticking a resize flag in there will change the physical size of the image (many of your phones take images that default to far larger than your laptop screen)  Resize can take either percentages or XX*YY pixel sizes  
-```magick input.png resize 50% output.jpg ```  
+```magick input.png -resize 50% output.jpg ```  
 finally the quality tag is used to specify the amount of compression to apply to your image.  
 A full command might look like:  
 ```magick input.png -resize 50% -quality 50% output.jpg```   
