@@ -26,3 +26,13 @@ While I have you on the main page I want to take the time to give a little bit o
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YT7Z6VQ5M4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YT7Z6VQ5M4');
+</script>
