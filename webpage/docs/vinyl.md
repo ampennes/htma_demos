@@ -5,7 +5,6 @@ This is an area where you have the utmost creative control.  Want to grab an ima
 
 ## Running the machine  
 <img src="images/vinyl/menu.jpg" align="right" width="200px"/>
-A "newline". This text doesn't float anymore, is left-aligned.
 We'll use the windows machine attached to the cutter to run everything this year.  The password to this machine (and most in our shop) is "eds"  Go ahead and open Google Chrome (must be a cromium derrived brower to enable web USB support) and go to mods.cba.mit.edu  Mods is a program originally written by Neil, now receiving community support, whose goal is to replace many proprietary machine control programs with some opensource javascript based alternatives.  Now right click and go to programs->open program->Roland->GX-GS 24 Vinyl cutters->cut.  You should see a colorful block based gui that can be a little hard to swallow at first but generally flows from left to right and top to bottom with only a few areas for you to mess with along the way.  Each block is a little snippet of code that does a useful portion of a job and the lines between them represent the dataflow betweent he modules.  Together they form a nice system that in this case turns an image into a proper cut file for our machine.  
 <br clear="right"/>
 ![](images/vinyl/full.jpg)
@@ -18,7 +17,7 @@ First let's get our image into mods and ready for parsing.  I'm starting with a 
 <img src="/images/vinyl/72Toolpath.jpg" align="right" width="200px"/>
 If you look closely here you'll see some jaggedness on the toolpath and some background noise in the image that is large enough to show up in the toolpath.  Honestly this isn't too bad but if your DPI dips much below 70 it'll start to get much more apparent.
 <br clear="right"/>
-<img src="/images/vinyl/500DPI.jpg" align="right" width="200px"/>
+<img src="https://github.com/ampennes/htma_demos/blob/main/webpage/site/images/vinyl/500DPI.jpg" align="right" width="200px"/>
 Now if we up the DPI to 500 the size of the image decreases to a more manageable ~4"x4" 
 <br clear="right"/>
 <img src="/images/vinyl/500Toolpath.jpg" align="right" width="200px"/>
