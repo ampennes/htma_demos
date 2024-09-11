@@ -5,7 +5,7 @@ Fire is wonderful and we wouldn't be where we are today had we not learned to ha
 
 ## Parameter search
 Now asking carboard to not light on fight as you blast it with enough energy to vaporize it sounds like a little bit of an oxymoron but there is actually a relatively wide parameter space in which you get good cuts without risking sending your machine up in smoke.  We (or at least I) can't take a mathematical approach to solving for a range of parameters that will cut your material so we must take an empirical one.  Let's start my making sure we live in the "too fast to cut through but won't burn" regime.  One assumprion that we will make to simplify the process is that our speed should be locked at 100% in order to finish the job as quickly as possible.  This will increase our throughput which is very impportant for serial jobs in shops with few machines, and it turns our 2D parameter search into an easier 1D search.  This is an assumption that will hold true for cardboard and even most acrylic on our lasers but it does start to fail on thicker, denser materials that take more time to cut.  Say you only cared about 5% tolerance then optimizing a 2D search would require ~400 tests and comparisons to ~20 for a 1D search so even an imperfect assumption saves us a lot of effort.  In other words we want to simplify this  
- ![](images/laser/search_small.jpg)
+![](images/laser/search_small.jpg)
   
 to this  
 ![](images/laser/power_small.jpg)
