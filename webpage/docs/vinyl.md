@@ -4,13 +4,13 @@
 This is an area where you have the utmost creative control.  Want to grab an image from somewhere of your favorite show/brand/game/team etc? Go for it.  Want to freehand something in Illustrator/inkscape/gimp?  Have at it.  The only rules are that you want it to be black and white and that you'll want a solid white boarder around the bounds of your image in order to have somewhere for the knife to cut.  If a black portion of your image extends all the way to the boundary then you'll find that edge missing from your toolpath.  Certainly not the end of the world  if you spot it before you start peeling as you can always freehand with some scissors or a knife but it doesn't take much to fix and make the machine do the work for you.
 
 ## Running the machine  
-<img src="images/vinyl/menu.jpg" align="right" width="200px"/>
+<img src="~/images/vinyl/menu.jpg" align="right" width="200px"/>
 We'll use the windows machine attached to the cutter to run everything this year.  The password to this machine (and most in our shop) is "eds"  Go ahead and open Google Chrome (must be a cromium derrived brower to enable web USB support) and go to mods.cba.mit.edu  Mods is a program originally written by Neil, now receiving community support, whose goal is to replace many proprietary machine control programs with some opensource javascript based alternatives.  Now right click and go to programs->open program->Roland->GX-GS 24 Vinyl cutters->cut.  You should see a colorful block based gui that can be a little hard to swallow at first but generally flows from left to right and top to bottom with only a few areas for you to mess with along the way.  Each block is a little snippet of code that does a useful portion of a job and the lines between them represent the dataflow betweent he modules.  Together they form a nice system that in this case turns an image into a proper cut file for our machine.  
 <br clear="right"/>
 ![](images/vinyl/full.jpg)
 
 ### Load an Image
-<img src="images/vinyl/72DPI.jpg" align="right" width="200px"/>  
+<img src="../images/vinyl/72DPI.jpg" align="right" width="200px"/>  
 First let's get our image into mods and ready for parsing.  I'm starting with a png of a smiley face because it was free use and we can talk about pixels.  This is an png so we'll load it into the png box and if you look at the bottom you'll see some important info.  The image defaulted to a DPI (dots per inch) of 72.  At this resolution the image has a size of ~28x28" which is too large to fit into our machine and we might not see the smoothest toolpaths given the relatively poor resolution.  There's also some weird background junk going on that is large enough to be cut at this scale.  If we increase the resolution to a more respectable 500 DPI the image will shrink to a more manageable 4"x4", the background noise is small enough that it disappears from our toolpaths, and we'll get much nicer curves and finer detail.
 
 <br clear="right"/>
