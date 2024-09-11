@@ -57,3 +57,16 @@ Sometimes I like being lazy.  I don't want to deal with remembering what not to 
 tldr to use this go to the top level of your repo and make a file called .gitignore  
 Inside that file I am simply going to put *.png and then save it.  That way whenever you add anything in git it will overlook anything that ends in .png entirely and save you from accidentally tracking a file that you shouldn't. 
 
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YT7Z6VQ5M4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YT7Z6VQ5M4');
+</script>

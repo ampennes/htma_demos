@@ -4,6 +4,7 @@ nav:
   - ImageCompression: imageCompression.md
   - Parametric Cad: parametric.md
   - Laser Cutting: lasers.md
+  - Vinyl Cutting: vinyl.md
   - 3D Printing: 3Dprinting.md
 
 theme: 

@@ -47,3 +47,17 @@ Another edge case worth being cognizant of is simply sometimes you need to cut t
 
 ## Some inspiration
 I hate whitespace.  I much prefer bounded problems and a bit of rails in order to help get the creative juices flowing.  The real inspiration for this site was to begin documenting a series of demos that like-minded folks could play with before they get started on their assignment for the week to help seed cool ideas and the "but what if..." thought process.  Everything up to this point has mostly been an afterthought that I figured I might as well document while on the journey to this destination as I thought it could come in handy.  This is one of the weeks in which the need for this isn't particularly strong so perhaps I'll just use it as a deeper dive into flexible bits and pattern choices.
+
+## Error 404- Splines not found  
+Corel draw (the art program we use to run the laser) is imperfect.  Sometimes you'll find that arcs/splines either are missing in the imported image or were distorted when they were opened.  I assume it's because DXF has multiple versions and the default from Fusion and Corel don't always agree.  Someone smarter than me can problably fix this or run some script that detects the disagreed upon parameters but I have a tried and true work around for the vast majority of situations.  I pop into the conference room and open up Solidworks (a wonderful cad program with a bit of a rougher learning curve), import that DXF into a new sketch, extrude it into a solid part and turn that part back into a dxf.  This solves pretty much every issue we've run across and is usually faster than guessing which image format is going to be happy.
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YT7Z6VQ5M4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YT7Z6VQ5M4');
+</script>
