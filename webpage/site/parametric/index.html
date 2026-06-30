@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Parametric Cad - HTMA</title>
+        <title>Parametric design - HTMA</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
@@ -49,16 +49,10 @@
                                 <a href="../imageCompression/" class="nav-link">ImageCompression</a>
                             </li>
                             <li class="nav-item">
-                                <a href="./" class="nav-link active" aria-current="page">Parametric Cad</a>
-                            </li>
-                            <li class="nav-item">
                                 <a href="../lasers/" class="nav-link">Laser Cutting</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../vinyl/" class="nav-link">Vinyl Cutting</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../3Dprinting/" class="nav-link">3D Printing</a>
                             </li>
                         </ul>
 
@@ -68,16 +62,6 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../imageCompression/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../lasers/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
                             <li class="nav-item dropdown">
                               <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
                                 <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
@@ -136,6 +120,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#evolving-design-documents" class="nav-link">Evolving Design Documents</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -146,6 +134,8 @@
 <h1 id="parametric-design">Parametric design</h1>
 <h2 id="cad-packages">CAD packages</h2>
 <h2 id="design-ethos">Design ethos</h2>
+<h2 id="evolving-design-documents">Evolving Design Documents</h2>
+<p>As you build you will encounter many patterns.  When you need a hole for an M3 bolt on a 3D print the traditional approach would be looking up the corresponding hole size, printing a test, adjusting that fit because printers dont give you true to dimension features and iterating until you have an acceptable size that both isn't too tight that you cannot cut threads while not being so loose that it can pull out.  This really doesn't take long but it is work that is repeated endlessly.  A slightly better approach often involves opening the CAD for the last project that you had that feature in, finding the actual up to date version, and getting the hole dimension.  This definitely works but is tedious.  Imagine a world where you just had a single spreadsheet in which you kept track of all the useful parameters like this that you have determined in your engineering journey.  This could be an excel sheet that you open and browse through, preferable stored somewhere that is available on more than one machine, this would even let you embed little diagrams to call out specific features if the naming gets too clunky.  Most CAD programs support importing a csv or json file with these associated parameters so your workflow could now be, open a new part, import a fresh copy of your personal design table, call out a properly toleranced hole for an M3 bolt on a bambu x1 carbon by simply typing in the parameter name "M3_hole_tap_Bambu_X1" and skipping the entire search process.  Certainly machine calibration isn't exactly identical across campus and may drift over time but you'll be much closer than with most other methods in a fraction of the time.  Building this document as you go can feel a little clunky but it will save you many hours, much frustration, and lots of scrapped building materials over the years.</p>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YT7Z6VQ5M4"></script>
 <script>
