@@ -1,5 +1,8 @@
 What is worth covering here?
+- Why print vs other manufacturing methods
 - parts within parts
+- Prusa slicer
+- "cannot be made subtractively"/assignment specific wording
 - hinges (discreet and living)
 - multi-material
 - a fuzzy skin example
@@ -7,6 +10,7 @@ What is worth covering here?
 - crush test with varying infill and num walls?
 - A bit on stress and strain
 - some quick FEA results for different living hinge designs?
+- Waterproofing?
 
 
 
