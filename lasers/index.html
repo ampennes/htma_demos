@@ -126,6 +126,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#types-of-lasers" class="nav-link">Types of lasers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#parameter-search" class="nav-link">Parameter search</a>
               <ul class="nav flex-column">
               </ul>
@@ -188,6 +192,16 @@
             </li>
               </ul>
             </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#the-assignment" class="nav-link">The Assignment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#worked-example" class="nav-link">Worked Example</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -196,10 +210,12 @@
 <h1 id="laser-cutting">Laser cutting</h1>
 <h2 id="safety">Safety</h2>
 <p>Fire is wonderful and we wouldn't be where we are today had we not learned to harness it long ago however fire in our shops is something that we should do our best to minimize.  Aditionally there are lots of harmful vapors that can be released as combustion byproducts so we need to be rather strict with what materials are allowed to be cut in our spaces and what ones should never enter the cutter.  When in doubt always chat with your shop staff.  </p>
+<h2 id="types-of-lasers">Types of lasers</h2>
+<p>Traditionally if you walked into a shop and saw a laser cutter it was almost always a CO2 based laser.  This results in a laser wavelength in the infrared range where it is readily absorbed by things such as wood, plastic and glass.  These machines generally are unable to cut or engrave any metal as the vast majority of hte beam energy is reflected by metals.  Industrially there are many other laser wavelengths but recently lasers with different gain mediums have started to trickle down into the hobby market giving us fiber sources, UV sources, MOPA sources and better cheaper optics have allowed us to reliably focus to a much smaller spot size such that light metal cutting and engraving is now possible at the hobbiest scale for the first time which opens the doors to many new and interesting approaches.  This is quickly moving to allow some of the work that would more traditionally require a water jet, a large expensive machine with non-trivial waste water disposal, to instead be done faster and cheaper on a laser.</p>
 <h2 id="parameter-search">Parameter search</h2>
 <p>Now asking carboard to not light on fire as you blast it with enough energy to vaporize it sounds like a sisyphusian struggle but there is actually a relatively wide parameter space in which you get good cuts without risking sending your machine up in smoke.  We (or at least I) can't take a mathematical approach to solving for a range of parameters that will cut your material so we must take an empirical one.  Let's start my making sure we live in the "too fast to cut through but won't burn" regime.  One assumprion that we will make to simplify the process is that our speed should be locked at 100% in order to finish the job as quickly as possible.  This will increase our throughput which is very impportant for serial jobs in shops with few machines, and it turns our 2D parameter search into an easier 1D search.  This is an assumption that will hold true for cardboard and even most acrylic on our lasers but it does start to fail on thicker, denser materials that take more time to cut.  Say you only cared about 5% tolerance then optimizing a 2D search would require ~400 tests and comparisons to ~20 for a 1D search so even an imperfect assumption saves us a lot of effort.  In other words we want to simplify this<br />
 <img alt="" src="../images/laser/search_small.jpg" /></p>
-<p>to this<br />
+<p>To this<br />
 <img alt="" src="../images/laser/power_small.jpg" /></p>
 <p>Now I won't give you numbers because that defeats the point of the exercise but we probably want to start around say 2% power and 100% speed and increase your power a couple percent at a time.  This will feel a little disappointing at first as you won't cut through all the way but it won't be a ball of fire... Don't forget to make note of the nice engraving parameter space that you'll likely pass through as you iterate to cutting.  It sounds funky but you can in fact engrave some pretty decent detail into cardboard.</p>
 <h2 id="cardboard">Cardboard</h2>
@@ -239,6 +255,33 @@
 <p>I hate whitespace.  I much prefer bounded problems and a bit of rails in order to help get the creative juices flowing.  The real inspiration for this site was to begin documenting a series of demos that like-minded folks could play with before they get started on their assignment for the week to help seed cool ideas and the "but what if..." thought process.  Everything up to this point has mostly been an afterthought that I figured I might as well document while on the journey to this destination as I thought it could come in handy.  This is one of the weeks in which the need for this isn't particularly strong so perhaps I'll just use it as a deeper dive into flexible bits and pattern choices.</p>
 <h2 id="error-404-splines-not-found">Error 404- Splines not found</h2>
 <p>Corel draw (the art program we use to run the laser) is imperfect.  Sometimes you'll find that arcs/splines either are missing in the imported image or were distorted when they were opened.  I assume it's because DXF has multiple versions and the default from Fusion and Corel don't always agree.  Someone smarter than me can problably fix this or run some script that detects the disagreed upon parameters but I have a tried and true work around for the vast majority of situations.  I pop into the conference room and open up Solidworks (a wonderful cad program with a bit of a rougher learning curve), import that DXF into a new sketch, extrude it into a solid part and turn that part back into a dxf.  This solves pretty much every issue we've run across and is usually faster than guessing which image format is going to be happy.</p>
+<h1 id="the-assignment">The Assignment</h1>
+<p>The assignment for this week is:<br />
+<strong>group assignment:</strong><br />
+      • do your lab's safety training<br />
+      • characterize your lasercutter's focus, power, speed, rate, 
+         kerf, joint clearance and types   </p>
+<p><strong>individual assignment:</strong><br />
+      • cut something on the vinylcutter<br />
+      • design, lasercut, and document a parametric construction kit, accounting for the lasercutter kerf<br />
+      • extra credit: design it to be assembled in multiple ways<br />
+      • extra credit: include elements that aren't flat <br />
+      • extra credit: engrave as well as cut  </p>
+<p>Let's break this down.  You will receive copious instruction for the safety training that will be lab specific so I won't go into it here.  The process for laser characterization will vary by machine so I won't go into it much here but the general idea is to play with these parameters and see how your results change.<br />
+We'll dive into more specifics on the individual design.  Vinyl cutting documentation is housed at <a href="https://ampennes.github.io/htma_demos/vinyl/">https://ampennes.github.io/htma_demos/vinyl/</a> so we'll skip that for now.
+Learning to speak Neil can take a bit and here we will go word by word.  </p>
+<p><strong>Design</strong>  This means you have to create the files.  You can't pop onto the internet and grab someone else's files.  It would be acceptable to do something like import images of something that you want to make which you then trace around in your CAD program. </p>
+<p><strong>Lasercut</strong>  This assignment is about learning to use a digital fabrication machine as much as it is about designing the parts themselves so you cannot do something like print out your part design on paper and then cut them out with hand tools.  </p>
+<p><strong>Document</strong> Put very simply in this course you are graded by Neil.  Neil's vision of you is simply the snippet that you document and push to your webpage.  If you have solved cold fusion but not written it down you will get no points.  You don't need the world's prettiest webpage simply good written descriptions and instructions and properly compressed images for each assignment will get you a good grade in this class.  Missing images or descirptions will cause you to lose points which is very sad.  Filling these pages as you go like a notebook is an easy recipe to success here.  </p>
+<p><strong>Parametric</strong> This needs to be done in a CAD tool.  You can't get by making parts in illustrator or another less capable tool like that.  You'll need a parameter table so that you can edit a variable and have all your parts rebuild.  You could have every element be parameterized but at a minimum I strongly suggest your tab/slot width be assigned a variable.  That way if you find that your parts don't fit quite right you can simply edit 1 or two lines, automatically cause all your parts to rebuild appropriately, then just export your files and cut again!</p>
+<p><strong>Construction kit</strong> The intent behind this assignment is for you to design a series of discreet pieces which can be assembled in multiple ways to create multiple objects.  This one has wiggle room as many people instead pick a physical object and make a series of parts that assemble into it.  This tends to not be an issue.</p>
+<p><strong>Accounting for kerf</strong> Again the kerf here is the width of the laser beam.  If I don't find this parameter all my holes will end up too big and any positive part will end up too small causing your fits to be sloppy.  Solve for this once, offset everything by it and you will be good to go.  </p>
+<h1 id="worked-example">Worked Example</h1>
+<p>Ok now lets actually go through making something. I'm going to start by solving for my laser kerf.  After doing my machine training I cut a simple 1cmx1cm square.  Using a pair of calipers I found that my part actually measured only 9mmx9mm meaning I will need to offset 0.5mm on all side in order for my parts to be true to size.  This number is an example, you will likely solve for something substantially smaller.<br />
+Now that I have a value for kerf I am going to open up my design software and start sketching some things out.  For this demo we're going to keep things simple and just do a few shapes that link together in multiple ways.<br />
+Square<br />
+Triangle<br />
+Hexagon (the bestagon)  </p>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YT7Z6VQ5M4"></script>
 <script>
