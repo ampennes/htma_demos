@@ -6,6 +6,12 @@ nav:
   - Laser Cutting: lasers.md
   - Vinyl Cutting: vinyl.md
  # - 3D Printing: 3Dprinting.md
+  #- Machine Tutorials:
+   #   - Makera Z1 PCBs: makera.md
+   #   - PrusaSlicer: prusa.md
+   #   - Xtool F1 Ultra: F1Ultra.md
+   #   - Laser PCBs: laserPCBs.md
+   
 
 theme: 
   name: mkdocs
