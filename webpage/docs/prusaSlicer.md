@@ -66,12 +66,42 @@ If your part geometry makes bed adhesion a struggle, and you've washed the print
 ![](images/prusa/brim1_small.jpg)
 
 
+## File Exporting
+Once the settings are all happy and you're ready to go hit the Export G-code button in the bottom right of the screen, save the resulting file to a USB drive, and head over to the machine to actually get it printing.  The guide for setting up and using the machine itself is here.
+
+# Advanced settings
+Perhaps the best feature of the Prusa slicer is the ability to really get in and modify the behavior of the machine and play with things.  Below are some that you may find particularly useful.
+
+## Paint on supports
+Automatic support generation is fine for many jobs but sometimes you'll appreciate an extra level of control.  If you disable automatic generation then select paint on supports on the left hand toolbar.  Left clicking and dragging on your model will mark blue areas that will be enforced with support material while right clicking will ensure that support is not generated at a specific area.  This can help keep support material out of holes or small areas that it would be difficult to remove or simply speed up your print time by not wasting time supporting areas that do not need it.
+
+## Fuzzy skin
+Fuzzy skin is the term coined for essentially adding random noise to the surface of your model.  There are two big use cases here, first the resulting organic surface does a good job of hiding layer lines and making some models more aesthetically pleasing.  If I were to print a tree or a log I could spend countless hours modeling a surface texture to make it visually convicing.  Instead I could roughen up the surface with 1 click in the slicer and skip the texturing of my model entirely.  Alternatively this is also a great way of adding grippy texture to a surface for things like climbing holds or tool handles. This can be applied to all external surfaces or painted on in specific areas.  
+
+## Vase mode
+Sometimes you want models printed with exactly 1 external wall, no seams, and no infill. This might be because you care about the external surface or because you want a translucent surface that light behaves predictably through.
 
 
+## Combining infill
+If you have a particularly large model that you want to optimize the print time of some low hanging fruit is to look at combining infill layers.  This will have the effect of printing your external perimeters that you can see at your normal layer height while printing the infill much coarser in order to save time.  Depending on your model this could be a negligible savings up to a factor of 2 for large models with lots of infill without sacrificing much.  This setting is available in Print settings/Infill/Automatic infill combination.  
+![](images/prusa/combineInfill_small.jpg)  
 
+## Variable layer height
+Layer height to level of detail isn't actually as linear as we make it out to be.  Every surface has some stairstep approximation applied to it.  This causes vertical features to look better than a curved top surface such as a sphere.  Reducing the layer height as the surface of the sphere becomes closer to horizontal can cause your models to come out much cleaner.  Since this tends to be the last bit of your job the time spent cleaning this surface up is often negligible.  Let's look at this simple sphere:  
+![](images/prusa/sphere1_small.jpg)  
+If we zoom in at the lower layers we can see that each layer of filament is almost vertically stacked on the last layer which will result in low surface roughness and look great.
+![](images/prusa/sphere2_small.jpg)  
+This however isn't true if we look at the top layers.  Fundamentally the stairs end up covering a large amount of the XY coordinate for each Z step so things look very rough.
+![](images/prusa/sphere3_small.jpg)  
+In order to fix this we would have to reduce the layer height but doing this globally would greatly increase our print time while not having a very large impact on the print time.  Variable layer height allows us to take a more nuanced approach adding detail where we need it while allowing less important areas to stay rough. This is available in the top toolbar.
+![](images/prusa/variableLayer_small.jpg)  
+Using the tool is a little funky.  Hover over the vertical bar on the right of the screen and at the layers that need extra detail hold left click until the feature looks more like how you want it.
+![](images/prusa/variableLayer2_small.jpg)  
+This ends up smoothing out the top surface so it doesn't look as rough and clearly 3D printed as it did before while only increasing print time by a few seconds.  
+![](images/prusa/sphere4_small.jpg)  
 
-
-
+## Cutting models
+Sometimes you have a model that needs to be cut along a plane.  This could be because your print is simply too large for the machine, maybe you have a 3D scan with some random junk in the model, or you simply need to make some adjustment to a model without opening blender or a CAD tool.  This cut tool will also allow you to place connectors such as pegs and holes in order to make the later reassembly of the models easier and more precise.
 
 
 
