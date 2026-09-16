@@ -5,13 +5,13 @@ nav:
   #- Parametric Design: parametric.md
   - Laser Cutting: lasers.md
   - Vinyl Cutting: vinyl.md
-  - 3D Printing: 3Dprinting.md
+  #- 3D Printing: 3Dprinting.md
   - Machine/Software Tutorials:
       - Makera Z1 PCBs: makera.md
       - PrusaSlicer: prusaSlicer.md
-      - Xtool F1 Ultra: F1Ultra.md
-      - Laser PCBs: laserPCBs.md
-      - KiCad PCB design: Kicad.md
+      #- Xtool F1 Ultra: F1Ultra.md
+      #- Laser PCBs: laserPCBs.md
+      #- KiCad PCB design: Kicad.md
 
 
 theme: 
